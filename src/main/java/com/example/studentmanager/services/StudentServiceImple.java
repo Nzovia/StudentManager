@@ -16,4 +16,10 @@ public class StudentServiceImple implements StudentService{
         return studentRepository.findAll();//returns all the students in a list to the controller
 
     }
+
+    @Override
+    public void saveStudent(Student student) {
+        this.studentRepository.save(student);
+    }
+
 }
