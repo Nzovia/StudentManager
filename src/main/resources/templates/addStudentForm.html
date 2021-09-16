@@ -10,13 +10,14 @@
     <h1>Student Management System</h1>
     <hr>
     <h2>Add New Student </h2>
-    <form action="#" th:action="@{/addStudent}" th:object="${student}", method="post"></form>
+    <form action="#" th:action="@{/addStudent}" th:object="${student}", method="post">
     <!--the action is the method and the object is in the  controller class, and the inbuilt method is the POST-->
     <input type="text" th:field ="*{name}" placeholder="Student Name" class="form-control mb-4 col-4">
     <input type="text" th:field ="*{regnumber}" placeholder="Registration Number" class="form-control mb-4 col-4">
     <input type="text" th:field ="*{courseId}" placeholder="Course ID" class="form-control mb-4 col-4">
     <input type="text" th:field ="*{email}" placeholder="Student Email" class="form-control mb-4 col-4">
-
+        <button type="submit" class="button button col-4">Add Student</button>
+    </form>
 </div>
 
 </body>
