@@ -18,6 +18,7 @@
             <th>email</th>
             <th>registration number</th>
             <th>Course Id</th>
+            <th>Actions</th>
         </tr>
         </thead>
         <tbody>
@@ -29,6 +30,10 @@
             <td th:text="${student.email}"></td>
             <td th:text="${student.regnumber}"></td>
             <td th:text="${student.courseId}"></td>
+            <!--{id} means getting binding ID in thyme leaf-->
+            <td> <a th:href="@{/showFormUpdate/{id}(id=${student.id})}" class="btn btn-primary">update</a>
+                <a th:href="@{/deleteStudent/{id}(id=${student.id})}" class="btn btn-danger">delete</a>
+            </td>
         </tr>
 
         </tbody>
